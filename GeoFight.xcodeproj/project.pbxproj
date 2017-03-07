@@ -12,6 +12,8 @@
 		7C5B97C71E6E0DBB00C6281E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5B97C51E6E0DBB00C6281E /* Main.storyboard */; };
 		7C5B97C91E6E0DBB00C6281E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5B97C81E6E0DBB00C6281E /* Assets.xcassets */; };
 		7C5B97CC1E6E0DBB00C6281E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5B97CA1E6E0DBB00C6281E /* LaunchScreen.storyboard */; };
+		7C5B97D41E6E12BC00C6281E /* GeoFight.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5B97D31E6E12BC00C6281E /* GeoFight.scnassets */; };
+		7C5B97D61E6F07F500C6281E /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B97D51E6F07F500C6281E /* ShapeType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		7C5B97C81E6E0DBB00C6281E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C5B97CB1E6E0DBB00C6281E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C5B97CD1E6E0DBB00C6281E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C5B97D31E6E12BC00C6281E /* GeoFight.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = GeoFight.scnassets; sourceTree = "<group>"; };
+		7C5B97D51E6F07F500C6281E /* ShapeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,12 @@
 			children = (
 				7C5B97BF1E6E0DBB00C6281E /* AppDelegate.swift */,
 				7C5B97C31E6E0DBB00C6281E /* GameViewController.swift */,
+				7C5B97D51E6F07F500C6281E /* ShapeType.swift */,
 				7C5B97C51E6E0DBB00C6281E /* Main.storyboard */,
 				7C5B97C81E6E0DBB00C6281E /* Assets.xcassets */,
 				7C5B97CA1E6E0DBB00C6281E /* LaunchScreen.storyboard */,
 				7C5B97CD1E6E0DBB00C6281E /* Info.plist */,
+				7C5B97D31E6E12BC00C6281E /* GeoFight.scnassets */,
 			);
 			path = GeoFight;
 			sourceTree = "<group>";
@@ -124,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C5B97D41E6E12BC00C6281E /* GeoFight.scnassets in Resources */,
 				7C5B97CC1E6E0DBB00C6281E /* LaunchScreen.storyboard in Resources */,
 				7C5B97C91E6E0DBB00C6281E /* Assets.xcassets in Resources */,
 				7C5B97C71E6E0DBB00C6281E /* Main.storyboard in Resources */,
@@ -138,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C5B97C41E6E0DBB00C6281E /* GameViewController.swift in Sources */,
+				7C5B97D61E6F07F500C6281E /* ShapeType.swift in Sources */,
 				7C5B97C01E6E0DBB00C6281E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
