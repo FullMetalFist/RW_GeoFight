@@ -21,6 +21,7 @@ class GameViewController: UIViewController {
         setupScene()
         setupCamera()
         spawnShape()
+        
     }
     
     override var shouldAutorotate: Bool {
@@ -71,7 +72,22 @@ class GameViewController: UIViewController {
         case ShapeType.tube:
             geometry = SCNTube(innerRadius: 0.5, outerRadius: 1.0, height: 1.0)
         }
+        
+        geometry.materials.first?.diffuse.contents = UIColor.random()
+        
         let geometryNode = SCNNode(geometry: geometry)
         scnScene.rootNode.addChildNode(geometryNode)
+        
+        geometryNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
+        
+        let randomX = Float.random(min: -2, max: 2)
+        let randomY = Float.random(min: 10, max: 18)
+        
+        let force = SCNVector3(x: randomX, y: randomY, z: 0)
+        
+        let position = SCNVector3(x: 0.05, y: 0.05, z: 0.05)
+        
+        geometryNode.physicsBody?.applyForce(force, at: position, asImpulse: true)
+        
     }
 }
