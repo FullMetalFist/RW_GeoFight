@@ -57,26 +57,26 @@ class GameViewController: UIViewController {
     func setupCamera() {
         cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 10)
+        cameraNode.position = SCNVector3(x: 0, y: 5, z: 10)
         scnScene.rootNode.addChildNode(cameraNode)
     }
     
     func spawnShape() {
         var geometry: SCNGeometry
         switch ShapeType.random() {
-        case ShapeType.box:
+        case .box:
             geometry = SCNBox(width: 1.0, height: 1.0, length: 1.0, chamferRadius: 0.0)
-        case ShapeType.capsule:
+        case .capsule:
             geometry = SCNCapsule(capRadius: 1.0, height: 1.0)
-        case ShapeType.cone:
+        case .cone:
             geometry = SCNCone(topRadius: 0.0, bottomRadius: 1.0, height: 1.0)
-        case ShapeType.cylinder:
+        case .cylinder:
             geometry = SCNCylinder(radius: 1.0, height: 1.0)
-        case ShapeType.pyramid:
+        case .pyramid:
             geometry = SCNPyramid(width: 1.0, height: 1.0, length: 1.0)
-        case ShapeType.sphere:
+        case .sphere:
             geometry = SCNSphere(radius: 1.0)
-        case ShapeType.tube:
+        case .tube:
             geometry = SCNTube(innerRadius: 0.5, outerRadius: 1.0, height: 1.0)
         }
         
@@ -84,7 +84,6 @@ class GameViewController: UIViewController {
         geometry.materials.first?.diffuse.contents = color
         
         let geometryNode = SCNNode(geometry: geometry)
-        scnScene.rootNode.addChildNode(geometryNode)
         
         geometryNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
         
@@ -105,6 +104,8 @@ class GameViewController: UIViewController {
         } else {
             geometryNode.name = "GOOD"
         }
+        
+        scnScene.rootNode.addChildNode(geometryNode)
     }
     
     func cleanScene() {
