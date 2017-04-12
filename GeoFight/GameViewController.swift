@@ -19,6 +19,8 @@ class GameViewController: UIViewController {
     
     var game = GameHelper.sharedInstance
     
+    var splashNodes: [String: SCNNode] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -131,6 +133,8 @@ class GameViewController: UIViewController {
         game.hudNode.position = SCNVector3(x: 0.0, y: 10.0, z: 0.0)
         scnScene.rootNode.addChildNode(game.hudNode)
     }
+    
+    
     
     func handleTouchFor(node: SCNNode) {
         if node.name == "GOOD" {
